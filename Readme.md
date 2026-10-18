@@ -2,9 +2,9 @@
 
 <div align="center">
 
-# 🎨 Learning CSS
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:9b59b6,50:3498db,100:2ecc71&height=220&section=header&text=Learning%20CSS&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=One%20Style%20at%20a%20Time&descSize=22&descAlignY=58" alt="Learning CSS — One Style at a Time" />
 
-**Learning CSS — One Style at a Time!** 🚀
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3500&pause=1200&color=9B59B6&center=true&vCenter=true&width=620&height=40&lines=HTML+builds+the+structure%2C+CSS+adds+the+style;From+selectors+and+colors+to+responsive+layouts;Documenting+my+CSS+journey%2C+module+by+module" alt="Typing animation: HTML builds the structure, CSS adds the style" />
 
 ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -32,17 +32,58 @@ CSS is the language that controls how web pages look: layout, colors, typography
 
 ## 📚 Topics Covered
 
-<div align="center">
+### 🧭 Learning Roadmap
 
-🌱 **Intro to CSS** → 🔗 **Ways to CSS** → 🎨 **Background Color** → 🚧 _more coming soon…_
+🟩🟩🟩⬜⬜⬜⬜⬜ **3 of 8 steps completed**
 
-</div>
+```mermaid
+flowchart LR
+    subgraph DONE["✅ Completed"]
+        direction TB
+        A["🌱 Intro to CSS"] --> B["🔗 Ways to CSS"] --> C["🎨 Background Color"]
+    end
+    subgraph NEXT["🔜 Coming up"]
+        direction TB
+        D["📦 Box Model"] --> E["↔️ Flexbox"] --> F["🧱 Grid"] --> G["📱 Responsive Design"] --> H["🚀 Modern CSS"]
+    end
+    DONE --> NEXT
 
-| # | Module | What I Learned | Explore |
-|:-:|:--|:--|:-:|
-| 1 | 🌱 **Intro to CSS** | What CSS is and how HTML (structure) and CSS (style) work together; writing a first rule with a selector, property, and value | [📂 Folder](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Intro-to-css) |
-| 2 | 🔗 **Ways to CSS** | Linking an external stylesheet; targeting elements with ID (`#`) and class (`.`) selectors, including multiple classes on one element | [📂 Folder](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Ways-to-CSS) |
-| 3 | 🎨 **Background Color** | `background-color`, background images (size, repeat, position), gradients, and color formats — names, HEX, RGB/RGBA, HSL/HSLA | [📂 Folder](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Coluring-Background) |
+    classDef done fill:#2ecc71,stroke:#27ae60,color:#ffffff,stroke-width:2px
+    classDef next fill:#f1c40f,stroke:#f39c12,color:#333333,stroke-width:2px
+    classDef todo fill:#ecf0f1,stroke:#bdc3c7,color:#555555,stroke-dasharray:5 5
+    class A,B,C done
+    class D next
+    class E,F,G,H todo
+    style DONE stroke:#2ecc71,stroke-width:2px
+    style NEXT stroke:#f1c40f,stroke-width:2px,stroke-dasharray:5 5
+```
+
+> 🟩 **Completed** · 🟨 **Up next** · ⬜ **Planned**
+
+### 🧱 Modules
+
+<table width="100%">
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <img src="https://img.shields.io/badge/MODULE%2001-2ecc71?style=for-the-badge" alt="Module 01" />
+      <h3>🌱 Intro to CSS</h3>
+      <p>What CSS is, how HTML (structure) and CSS (style) work together, and writing a first rule.</p>
+      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Intro-to-css"><b>📂 Explore</b></a>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <img src="https://img.shields.io/badge/MODULE%2002-3498db?style=for-the-badge" alt="Module 02" />
+      <h3>🔗 Ways to CSS</h3>
+      <p>Linking an external stylesheet and targeting elements with ID (<code>#</code>) and class (<code>.</code>) selectors.</p>
+      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Ways-to-CSS"><b>📂 Explore</b></a>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <img src="https://img.shields.io/badge/MODULE%2003-9b59b6?style=for-the-badge" alt="Module 03" />
+      <h3>🎨 Background Color</h3>
+      <p><code>background-color</code>, images, gradients, and color formats — names, HEX, RGB/RGBA, HSL/HSLA.</p>
+      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Coluring-Background"><b>📂 Explore</b></a>
+    </td>
+  </tr>
+</table>
 
 > 🚧 More modules are on the way — this list grows as I learn.
 
@@ -54,8 +95,6 @@ CSS is the language that controls how web pages look: layout, colors, typography
 - ✅ **Text styling** — aligning and coloring text with `text-align` and `color`
 - ✅ **Backgrounds** — setting background colors and images, plus size, repeat, position, and gradients
 - ✅ **Color formats** — using color names, HEX, RGB/RGBA, and HSL/HSLA values
-
-> 🔜 **Coming up:** box model, Flexbox, Grid, responsive design, and modern CSS.
 
 ## 🧩 Syntax & Key Concepts
 
@@ -119,5 +158,7 @@ CSS is the language that controls how web pages look: layout, colors, typography
 ⭐ **Found this helpful? Consider giving the repo a star!** ⭐
 
 Made with ❤️ while learning CSS
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:9b59b6,50:3498db,100:2ecc71&height=120&section=footer" alt="" />
 
 </div>
