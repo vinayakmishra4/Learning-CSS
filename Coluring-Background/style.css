@@ -1,0 +1,45 @@
+* 
+{
+margin: 0;
+padding: 0;
+}
+
+.H1
+{
+color: #fff;
+background-color: #3498db;
+padding: 10px;
+text-align: center;
+}
+
+p
+{
+color: #333;
+background-color: #f2f2f2;
+padding: 15px;
+text-align: center;
+font-size: 16px;
+}
+
+.H2
+{
+color: #fff;
+background-color: #2ecc71;
+padding: 10px;
+text-align: center;
+}
+
+p
+{
+color: #333;
+background-color: #f2f2f2;
+padding: 15px;
+text-align: center;
+font-size: 16px;
+}
+body
+{
+    background-image:url('https://image-processor-storage.s3.us-west-2.amazonaws.com/images/281c2d4581ed27c8a258b0e79bc504ad/halo-of-neon-ring-illuminated-in-the-stunning-landscape-of-yosemite.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
