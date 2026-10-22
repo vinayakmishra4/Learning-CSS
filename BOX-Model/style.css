@@ -1,8 +1,21 @@
 *
 {
-    margin: 50px;
-    padding: 50px;
-    height: auto;
-    width: auto;
-    border: 4px;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.class1
+{
+
+    background-color: red;
+    margin: 30px;
+    height: 30px;
+
+}
+
+.class2
+{
+    background-color: aqua;
 }
