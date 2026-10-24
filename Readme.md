@@ -26,26 +26,26 @@ CSS is the language that controls how web pages look: layout, colors, typography
 
 ### 🧭 Learning Roadmap
 
-🟩🟩🟩🟩🟩⬜⬜⬜⬜ **5 of 9 steps completed**
+🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **6 of 10 steps completed**
 
 ```mermaid
 flowchart LR
     subgraph DONE["✅ Completed"]
         direction TB
-        A["🌱 Intro to CSS"] --> B["🔗 Ways to CSS"] --> C["🎨 Background Color"] --> D["📦 Box Model"] --> E["🔤 Font & Display"]
+        A["🌱 Intro to CSS"] --> B["🔗 Ways to CSS"] --> C["🎨 Background Color"] --> D["📦 Box Model"] --> E["🔤 Font & Display"] --> F["📏 Size, Positions & Lists"]
     end
     subgraph NEXT["🔜 Coming up"]
         direction TB
-        F["↔️ Flexbox"] --> G["🧱 Grid"] --> H["📱 Responsive Design"] --> I["🚀 Modern CSS"]
+        G["↔️ Flexbox"] --> H["🧱 Grid"] --> I["📱 Responsive Design"] --> J["🚀 Modern CSS"]
     end
     DONE --> NEXT
 
     classDef done fill:#2ecc71,stroke:#27ae60,color:#ffffff,stroke-width:2px
     classDef next fill:#f1c40f,stroke:#f39c12,color:#333333,stroke-width:2px
     classDef todo fill:#ecf0f1,stroke:#bdc3c7,color:#555555,stroke-dasharray:5 5
-    class A,B,C,D,E done
-    class F next
-    class G,H,I todo
+    class A,B,C,D,E,F done
+    class G next
+    class H,I,J todo
     style DONE stroke:#2ecc71,stroke-width:2px
     style NEXT stroke:#f1c40f,stroke-width:2px,stroke-dasharray:5 5
 ```
@@ -85,28 +85,34 @@ flowchart LR
     <td align="center" valign="top" width="33%">
       <b>🟠 MODULE 05</b>
       <h3>🔤 Font &amp; Display</h3>
-      <p>The <code>display</code> property (inline, block, inline-block), <code>text-align</code>, and fonts — <code>font-family</code>, <code>font-size</code>, and <code>line-height</code>.</p>
+      <p>Font properties — <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, <code>line-height</code> — and the <code>display</code> property: block, inline, inline-block, flex, grid, and none.</p>
       <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Font-Display"><b>📂 Explore</b></a>
     </td>
     <td align="center" valign="top" width="33%">
-      <b>⚪ MODULE 06</b>
-      <h3>🚧 Coming Soon</h3>
-      <p>More modules are on the way — this list grows as I learn.</p>
+      <b>🟡 MODULE 06</b>
+      <h3>📏 Size, Positions &amp; Lists</h3>
+      <p>CSS units (absolute and relative), the <code>position</code> property with <code>z-index</code>, and styling lists with <code>list-style</code>.</p>
+      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Size-Postions-Lists"><b>📂 Explore</b></a>
     </td>
   </tr>
 </table>
+
+> 🚧 More modules are on the way — this list grows as I learn.
 
 ## 🔧 Skills Gained
 
 - ✅ **HTML + CSS together** — applying CSS to HTML with inline, internal, and external styles
 - ✅ **CSS syntax** — writing rules with selectors, properties, and values
 - ✅ **Selectors** — targeting elements with element, ID, and class selectors, including multiple classes
-- ✅ **Text styling** — aligning and coloring text, and setting `font-family`, `font-size`, and `line-height`
+- ✅ **Text & fonts** — aligning and coloring text, and controlling `font-family`, `font-size`, `font-weight`, and `line-height`
 - ✅ **Backgrounds** — setting background colors and images, plus size, repeat, position, and gradients
 - ✅ **Color formats** — using color names, HEX, RGB/RGBA, and HSL/HSLA values
 - ✅ **Box model** — working with content, padding, border, and margin, plus `box-sizing`
 - ✅ **Spacing & borders** — setting width, height, margin, padding, and border, including shorthand values and margin collapse
-- ✅ **Display** — controlling how elements flow with `inline`, `block`, and `inline-block`
+- ✅ **Display** — choosing how elements flow with `block`, `inline`, `inline-block`, `flex`, `grid`, and `none`
+- ✅ **Units** — sizing with absolute units (`px`, `cm`, `pt`) and relative units (`%`, `em`, `rem`, `vw`, `vh`)
+- ✅ **Positioning** — placing elements with `position` (`static`, `relative`, `absolute`, `fixed`, `sticky`), offsets, and `z-index`
+- ✅ **Lists** — styling ordered, unordered, and description lists with the `list-style` properties
 
 ## 🧩 Syntax & Key Concepts
 
@@ -132,6 +138,10 @@ flowchart LR
 | Four-value shorthand (margin, padding) | `property: top right bottom left;` |
 | Border shorthand | `border: width style color;` |
 | Font family | `font-family: font-name, generic-family;` |
+| Length with a unit | `property: <number><unit>;` |
+| Positioning | `position: value;` · `top: length;` · `right: length;` · `bottom: length;` · `left: length;` |
+| Stacking order | `z-index: number;` |
+| List shorthand | `list-style: type position image;` |
 
 ### Key Concepts
 
@@ -146,6 +156,10 @@ flowchart LR
 | 🔄 **Margin Collapse** | Adjoining vertical margins overlap instead of adding up — 30px and 20px give a 30px gap, not 50px. |
 | 📐 **Box Sizing** | `content-box` (the default) adds padding and border to the width; `border-box` includes them, so sizes are easier to predict. |
 | 🧱 **Display** | `block` elements start on a new line, `inline` elements flow within a line, and `inline-block` flows inline but accepts width and height. |
+| 📏 **Units** | Absolute units (`px`, `cm`, `mm`, `in`, `pt`, `pc`) stay fixed; relative units (`%`, `em`, `rem`, `vw`, `vh`) scale with their parent, font size, or screen. |
+| 📍 **Positioning** | `static` is the default; `relative` shifts an element from its normal spot, `absolute` places it in its containing block, `fixed` pins it to the viewport, and `sticky` sticks while scrolling. |
+| 🥞 **Stacking order** | When elements overlap, a higher `z-index` brings an element to the front. |
+| 📋 **Lists** | `ol` makes numbered lists, `ul` makes bulleted lists, and `dl` pairs terms with descriptions; the `list-style` properties customize the markers. |
 | 👀 **Readability** | Good color combinations and strong contrast make text easier to read. |
 
 ## 🏅 Certificate
@@ -165,6 +179,7 @@ flowchart LR
 - Keeping HTML (structure) and CSS (style) in separate files keeps pages clean and easy to maintain.
 - Classes make styles reusable, while IDs target a single element.
 - The box model explains an element's real size and spacing — `border-box` makes sizing more predictable.
+- Relative units (`%`, `rem`, `vw`) let sizes adapt to their context, while `position` and `z-index` control where elements sit and which one is on top.
 - Choosing readable color combinations matters as much as choosing attractive ones.
 
 **🎯 Next Steps**
