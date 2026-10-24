@@ -1,0 +1,43 @@
+.html
+{
+    font-size: 4px;
+}
+
+.contianer
+{
+    font-size: 12px;
+}
+
+.box
+{
+    /*size is n X parent(npx)= nem*/
+    /*font-size: 3em;*/
+
+    /*size is n X root(npx)= nrem*/
+    /*font-size: 3rem;*/
+    background-color: aqua;
+    width: 400px;
+    width: 50vw;
+    height: 50vh;
+    min-width: 60px;
+    max-width: 200px;
+    min-height: 60px;
+    max-height: 200px;
+    position: static;
+    
+}
+
+.box2
+{
+
+    background-color: brown;
+    width: 400px;
+    width: 50vw;
+    height: 50vh;
+    min-width: 60px;
+    max-width: 200px;
+    min-height: 60px;
+    max-height: 200px;
+    position: relative;
+
+}
