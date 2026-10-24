@@ -1,12 +1,9 @@
+<!-- NOTE: keep the assets/ folder (banner.svg, footer.svg) next to this file so the header and footer images load. -->
+<!-- TODO: Replace every [PLACEHOLDER] and INSERT_..._HERE link below with your own details, then delete this comment. -->
+
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:9b59b6,50:3498db,100:2ecc71&height=220&section=header&text=Learning%20CSS&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=One%20Style%20at%20a%20Time&descSize=22&descAlignY=58" alt="Learning CSS — One Style at a Time" />
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3500&pause=1200&color=9B59B6&center=true&vCenter=true&width=620&height=40&lines=HTML+builds+the+structure%2C+CSS+adds+the+style;From+selectors+and+colors+to+responsive+layouts;Documenting+my+CSS+journey%2C+module+by+module" alt="Typing animation: HTML builds the structure, CSS adds the style" />
-
-![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Front-End](https://img.shields.io/badge/Front--End-Styling-success?style=for-the-badge)
+<h1 align="center"><img src="assets/banner.svg" alt="Learning CSS — One Style at a Time" width="100%" /></h1>
 
 [Overview](#-overview) · [Course Info](#-course-info) · [Topics](#-topics-covered) · [Skills](#-skills-gained) · [Syntax](#-syntax--key-concepts) · [Certificate](#-certificate) · [Links](#-reference--links) · [Next Steps](#-key-takeaways--next-steps)
 
@@ -63,19 +60,19 @@ flowchart LR
 <table width="100%">
   <tr>
     <td align="center" valign="top" width="33%">
-      <img src="https://img.shields.io/badge/MODULE%2001-2ecc71?style=for-the-badge" alt="Module 01" />
+      <b>🟢 MODULE 01</b>
       <h3>🌱 Intro to CSS</h3>
       <p>What CSS is, how HTML (structure) and CSS (style) work together, and writing a first rule.</p>
       <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Intro-to-css"><b>📂 Explore</b></a>
     </td>
     <td align="center" valign="top" width="33%">
-      <img src="https://img.shields.io/badge/MODULE%2002-3498db?style=for-the-badge" alt="Module 02" />
+      <b>🔵 MODULE 02</b>
       <h3>🔗 Ways to CSS</h3>
       <p>The three ways to add CSS — inline, internal, and external — plus element, class, and ID selectors.</p>
       <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Ways-to-CSS"><b>📂 Explore</b></a>
     </td>
     <td align="center" valign="top" width="33%">
-      <img src="https://img.shields.io/badge/MODULE%2003-9b59b6?style=for-the-badge" alt="Module 03" />
+      <b>🟣 MODULE 03</b>
       <h3>🎨 Background Color</h3>
       <p><code>background-color</code>, images, gradients, and color formats — names, HEX, RGB/RGBA, HSL/HSLA.</p>
       <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Coluring-Background"><b>📂 Explore</b></a>
@@ -83,19 +80,19 @@ flowchart LR
   </tr>
   <tr>
     <td align="center" valign="top" width="33%">
-      <img src="https://img.shields.io/badge/MODULE%2004-e74c3c?style=for-the-badge" alt="Module 04" />
+      <b>🔴 MODULE 04</b>
       <h3>📦 Box Model</h3>
       <p>Content, padding, border, and margin; width and height; margin collapse; and <code>box-sizing</code>.</p>
       <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/BOX-Model"><b>📂 Explore</b></a>
     </td>
     <td align="center" valign="top" width="33%">
-      <img src="https://img.shields.io/badge/MODULE%2005-1abc9c?style=for-the-badge" alt="Module 05" />
+      <b>🟠 MODULE 05</b>
       <h3>🔤 Font &amp; Display</h3>
       <p>The <code>display</code> property (inline, block, inline-block), <code>text-align</code>, and fonts — <code>font-family</code>, <code>font-size</code>, and <code>line-height</code>.</p>
       <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Font-Display"><b>📂 Explore</b></a>
     </td>
     <td align="center" valign="top" width="33%">
-      <img src="https://img.shields.io/badge/MODULE%2006-95a5a6?style=for-the-badge" alt="Module 06" />
+      <b>⚪ MODULE 06</b>
       <h3>🚧 Coming Soon</h3>
       <p>More modules are on the way — this list grows as I learn.</p>
     </td>
@@ -187,6 +184,6 @@ flowchart LR
 
 Made with ❤️ while learning CSS
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:9b59b6,50:3498db,100:2ecc71&height=120&section=footer" alt="" />
+<img src="assets/footer.svg" alt="Keep Coding. Keep Learning. Keep Creating." width="100%" />
 
 </div>
