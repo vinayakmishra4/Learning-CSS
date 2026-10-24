@@ -1,9 +1,6 @@
-<!-- NOTE: keep the assets/ folder (banner.svg, footer.svg) next to this file so the header and footer images load. -->
-<!-- TODO: Replace every [PLACEHOLDER] and INSERT_..._HERE link below with your own details, then delete this comment. -->
-
 <div align="center">
 
-<h1 align="center"><img src="assets/banner.svg" alt="Learning CSS — One Style at a Time" width="100%" /></h1>
+<h1 align="center"><img src="banner.svg" alt="Learning CSS — One Style at a Time" width="100%" /></h1>
 
 [Overview](#-overview) · [Course Info](#-course-info) · [Topics](#-topics-covered) · [Skills](#-skills-gained) · [Syntax](#-syntax--key-concepts) · [Certificate](#-certificate) · [Links](#-reference--links) · [Next Steps](#-key-takeaways--next-steps)
 
@@ -184,6 +181,6 @@ flowchart LR
 
 Made with ❤️ while learning CSS
 
-<img src="assets/footer.svg" alt="Keep Coding. Keep Learning. Keep Creating." width="100%" />
+<img src="footer.svg" alt="Keep Coding. Keep Learning. Keep Creating." width="100%" />
 
 </div>
