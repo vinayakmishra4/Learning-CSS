@@ -1,0 +1,31 @@
+
+/* Apply styles to the entire page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Georgia, serif;
+    border-top: 5px solid #343a40;
+    background-color: #ffffff;
+}
+
+/* Heading styles */
+h1 {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    display: block;
+    border-bottom: 2px solid #dddddd;
+    font-size: 30px;
+}
+
+/* Paragraph styles */
+p {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    display: block;
+    line-height: 1.5;
+    font-size: 16px;
+}
