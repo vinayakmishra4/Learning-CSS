@@ -1,0 +1,134 @@
+/* Chapter 8 - Transforms, Transitions & Animations
+   Colors follow the concept: purple = transforms, blue = transitions, green = animations. */
+
+:root {
+  --paper: #fbfbfd;
+  --ink: #1b2430;
+  --muted: #5b6776;
+  --line: #d9dee6;
+  --purple: #9b59b6;  --purple-deep: #8e44ad;
+  --blue: #3498db;    --blue-deep: #2471a3;
+  --green: #2ecc71;   --green-deep: #1e8449;
+  --mono: ui-monospace, "SF Mono", Consolas, "Courier New", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+/* page column */
+main, .hero, footer { max-width: 960px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+.hero { padding-top: 56px; }
+
+/* header */
+h1 { font-size: clamp(3rem, 11vw, 5.5rem); line-height: 1; font-weight: 800; letter-spacing: -0.03em; }
+.subtitle { margin-top: 8px; font-size: 1.25rem; color: var(--muted); }
+nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
+nav a { color: var(--ink); text-decoration: none; padding: 4px 0; border-bottom: 3px solid var(--ink); }
+.n-transform  { border-bottom-color: var(--purple); }
+.n-transition { border-bottom-color: var(--blue); }
+.n-animation  { border-bottom-color: var(--green); }
+
+/* sections */
+section { margin-top: 56px; }
+h2 { padding-top: 12px; font-size: 1.9rem; line-height: 1.2; border-top: 3px solid var(--ink); }
+#transforms h2  { border-top-color: var(--purple); }
+#transitions h2 { border-top-color: var(--blue); }
+#animations h2  { border-top-color: var(--green); }
+h3 { margin: 28px 0 8px; font-size: 1.05rem; }
+.lead { margin-top: 8px; max-width: 62ch; color: var(--muted); }
+
+/* specimens: a demo plus its CSS */
+.specimens { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 28px 20px; margin-top: 16px; }
+.specimens.wide { grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
+figcaption { margin-top: 8px; }
+figcaption strong { display: block; font-size: 0.95rem; }
+code { display: block; font: 0.78rem/1.5 var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+.hint { margin-top: 6px; font-size: 0.85rem; color: var(--muted); }
+.defs { margin: 14px 0 0; padding: 10px 12px; border-left: 3px solid var(--green); background: #eef2f6; }
+
+/* ---------- 1. TRANSFORMS ---------- */
+.stage { position: relative; height: 132px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.stage::before, .box { position: absolute; top: 34px; left: calc(50% - 32px); width: 64px; height: 64px; }
+.stage::before { content: ""; border: 2px dashed #aab4c2; border-radius: 4px; }   /* the starting position */
+.box { display: grid; place-items: center; border-radius: 4px; background: var(--purple-deep); color: #fff; font-size: 1.2rem; font-weight: 700; }
+.d3 { perspective: 320px; }
+
+.t-translate { transform: translate(40px, 16px); }
+.t-rotate    { transform: rotate(30deg); }
+.t-scalex    { transform: scaleX(1.7); }
+.t-scaley    { transform: scaleY(1.5); }
+.t-scale     { transform: scale(1.4); }
+.t-skew      { transform: skew(20deg, 10deg); }
+.t-matrix    { transform: matrix(1, 0.2, -0.4, 1, 20, 0); }
+.o-tl        { transform-origin: top left;     transform: rotate(35deg); }
+.o-br        { transform-origin: bottom right; transform: rotate(-35deg); }
+.t-rx        { transform: rotateX(55deg); }
+.t-ry        { transform: rotateY(55deg); }
+.t-rz        { transform: rotateZ(40deg); }
+
+/* ---------- 2. TRANSITIONS ---------- */
+.lane { display: flex; align-items: center; height: 64px; padding: 0 12px; border: 1px solid var(--line); border-radius: 6px; background: #fff; overflow: hidden; }
+.lane:focus-visible, .zone:focus-visible { outline: 3px solid var(--blue-deep); outline-offset: 2px; }
+.slab { width: 64px; height: 24px; border-radius: 999px; background: var(--blue); }
+.sq   { width: 32px; height: 32px; border-radius: 4px; background: var(--blue); }
+
+.tr-long  { transition-property: width; transition-duration: 1s; transition-timing-function: ease-in; transition-delay: 0s; }
+.tr-short { transition: width 3s ease-in 2s; }
+.tr-multi { transition: opacity 1s ease-out 1s, transform 2s ease-in; }
+
+.lane:is(:hover, :focus) .slab { width: 100%; }
+.lane:is(:hover, :focus) .sq   { opacity: 0.25; transform: translateX(120px) rotate(180deg); }
+
+/* ---------- 3. ANIMATIONS ---------- */
+@keyframes harry { from { width: 20px; } to { width: 200px; } }
+@keyframes steps {
+  0%   { width: 20px;  background: #e74c3c; }
+  50%  { width: 80px;  background: #f1c40f; }
+  100% { width: 200px; background: var(--green); }
+}
+
+.bar { max-width: 100%; height: 24px; border-radius: 4px; background: var(--green); }
+.an-long  { animation-name: harry; animation-duration: 2s; animation-timing-function: ease-in-out; animation-delay: 0s; animation-iteration-count: infinite; animation-direction: alternate; }
+.an-steps { animation: steps 4s ease-in-out infinite alternate; }
+.an-short { animation: harry 6s linear 1s infinite reverse; }
+
+/* ---------- PRACTICE SET ---------- */
+.frame { display: grid; place-items: center; padding: 11px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.zone  { padding: 22px 12px; }
+.progress { width: 100%; height: 6px; border-radius: 999px; background: #e3e8ef; overflow: hidden; }
+.progress span { display: block; width: 0; height: 100%; border-radius: inherit; }
+.p-anim span  { background: var(--green); animation: load 3s ease-in-out infinite; }
+.p-trans span { background: var(--blue); transition: width 3s ease-in-out; }
+.zone:is(:hover, :focus) .p-trans span { width: 100%; }
+@keyframes load { from { width: 0; } to { width: 100%; } }
+
+.spin { display: grid; place-items: center; width: 110px; height: 110px; border-radius: 50%; background: linear-gradient(90deg, var(--purple-deep) 50%, var(--blue-deep) 50%); color: #fff; font-size: 1.2rem; font-weight: 700; animation: spin 4s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.slider { overflow: hidden; border: 1px solid var(--line); border-radius: 6px; }
+.slides { display: flex; width: 300%; animation: slide 9s ease-in-out infinite; }
+.slides > * { flex: 1; height: 150px; display: grid; place-items: center; object-fit: cover; color: #fff; font-size: 1.3rem; font-weight: 700; }
+.slides > :nth-child(1) { background: var(--purple-deep); }
+.slides > :nth-child(2) { background: var(--blue-deep); }
+.slides > :nth-child(3) { background: var(--green-deep); }
+@keyframes slide {
+  0%, 28%  { transform: translateX(0); }
+  33%, 61% { transform: translateX(-33.333%); }
+  66%, 95% { transform: translateX(-66.666%); }
+  100%     { transform: translateX(0); }
+}
+
+footer { margin-top: 64px; padding-top: 16px; padding-bottom: 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+
+/* respect reduced motion: loops play once instead of forever */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-iteration-count: 1 !important; }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 8: Transforms, Transitions and Animations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Chapter 8</h1>
+  <p class="subtitle">Transforms, transitions and animations</p>
+  <nav aria-label="Sections">
+    <a class="n-transform" href="#transforms">Transforms</a>
+    <a class="n-transition" href="#transitions">Transitions</a>
+    <a class="n-animation" href="#animations">Animations</a>
+    <a href="#practice">Practice set</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- TRANSFORMS -->
+  <section id="transforms">
+    <h2>Transforms</h2>
+    <p class="lead">Transforms rotate, move, skew or scale an element. The dashed outline marks where each box started.</p>
+
+    <h3>2D transform methods</h3>
+    <div class="specimens">
+      <figure class="specimen">
+        <div class="stage"><div class="box t-translate">A</div></div>
+        <figcaption><strong>translate()</strong><code>transform: translate(40px, 16px);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage"><div class="box t-rotate">A</div></div>
+        <figcaption><strong>rotate()</strong><code>transform: rotate(30deg);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage"><div class="box t-scalex">A</div></div>
+        <figcaption><strong>scaleX()</strong><code>transform: scaleX(1.7);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage"><div class="box t-scaley">A</div></div>
+        <figcaption><strong>scaleY()</strong><code>transform: scaleY(1.5);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage"><div class="box t-scale">A</div></div>
+        <figcaption><strong>scale()</strong><code>transform: scale(1.4);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage"><div class="box t-skew">A</div></div>
+        <figcaption><strong>skew()</strong><code>transform: skew(20deg, 10deg);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage"><div class="box t-matrix">A</div></div>
+        <figcaption><strong>matrix()</strong><code>transform: matrix(1, 0.2, -0.4, 1, 20, 0);</code></figcaption>
+      </figure>
+    </div>
+
+    <h3>transform-origin</h3>
+    <p class="lead">The origin is the point an element transforms around. The default is the center.</p>
+    <div class="specimens">
+      <figure class="specimen">
+        <div class="stage"><div class="box o-tl">A</div></div>
+        <figcaption><strong>top left</strong><code>transform-origin: top left;<br>transform: rotate(35deg);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage"><div class="box o-br">A</div></div>
+        <figcaption><strong>bottom right</strong><code>transform-origin: bottom right;<br>transform: rotate(-35deg);</code></figcaption>
+      </figure>
+    </div>
+
+    <h3>3D transform methods</h3>
+    <p class="lead">3D transforms need depth, so the stage sets perspective: 320px.</p>
+    <div class="specimens">
+      <figure class="specimen">
+        <div class="stage d3"><div class="box t-rx">A</div></div>
+        <figcaption><strong>rotateX()</strong><code>transform: rotateX(55deg);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage d3"><div class="box t-ry">A</div></div>
+        <figcaption><strong>rotateY()</strong><code>transform: rotateY(55deg);</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="stage d3"><div class="box t-rz">A</div></div>
+        <figcaption><strong>rotateZ()</strong><code>transform: rotateZ(40deg);</code></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- TRANSITIONS -->
+  <section id="transitions">
+    <h2>Transitions</h2>
+    <p class="lead">Transitions change a property value smoothly over a set time. Hover over a bar, or focus it with the Tab key, to trigger the change.</p>
+    <div class="specimens wide">
+      <figure class="specimen">
+        <div class="lane" tabindex="0"><div class="slab tr-long"></div></div>
+        <figcaption><strong>Longhand properties</strong><code>transition-property: width;<br>transition-duration: 1s;<br>transition-timing-function: ease-in;<br>transition-delay: 0s;</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="lane" tabindex="0"><div class="slab tr-short"></div></div>
+        <figcaption><strong>Shorthand</strong><code>transition: width 3s ease-in 2s;</code><p class="hint">The order is property, duration, timing function, delay. This one waits 2s before it starts.</p></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="lane" tabindex="0"><div class="sq tr-multi"></div></div>
+        <figcaption><strong>Multiple properties</strong><code>transition: opacity 1s ease-out 1s, transform 2s ease-in;</code><p class="hint">The second transition skips the delay.</p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ANIMATIONS -->
+  <section id="animations">
+    <h2>Animations</h2>
+    <p class="lead">Animations give more control than transitions. A @keyframes rule describes the styles, and the animation properties say how to play them.</p>
+    <code class="defs">@keyframes harry { from { width: 20px; } to { width: 200px; } }</code>
+    <div class="specimens wide">
+      <figure class="specimen">
+        <div class="lane"><div class="bar an-long"></div></div>
+        <figcaption><strong>Longhand properties</strong><code>animation-name: harry;<br>animation-duration: 2s;<br>animation-timing-function: ease-in-out;<br>animation-delay: 0s;<br>animation-iteration-count: infinite;<br>animation-direction: alternate;</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="lane"><div class="bar an-steps"></div></div>
+        <figcaption><strong>Percentage keyframes</strong><code>@keyframes steps {<br>0% { width: 20px; }<br>50% { width: 80px; }<br>100% { width: 200px; }<br>}<br>animation: steps 4s ease-in-out infinite alternate;</code><p class="hint">Keyframes can change several properties at once. This one also changes the color.</p></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="lane"><div class="bar an-short"></div></div>
+        <figcaption><strong>Shorthand</strong><code>animation: harry 6s linear 1s infinite reverse;</code><p class="hint">The order is name, duration, timing function, delay, iteration count, direction.</p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PRACTICE SET -->
+  <section id="practice">
+    <h2>Practice set</h2>
+    <p class="lead">The four tasks from the end of the chapter.</p>
+    <div class="specimens wide">
+      <figure class="specimen">
+        <div class="frame zone"><div class="progress p-anim"><span></span></div></div>
+        <figcaption><strong>1. Thin progress bar with an animation</strong><code>animation: load 3s ease-in-out infinite;</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="frame zone" tabindex="0"><div class="progress p-trans"><span></span></div></div>
+        <figcaption><strong>2. The same bar with a transition</strong><code>transition: width 3s ease-in-out;</code><p class="hint">Hover over the box, or focus it, to fill the bar.</p></figcaption>
+      </figure>
+      <figure class="specimen">
+        <div class="frame"><div class="spin" role="img" aria-label="Rotating placeholder image">CSS</div></div>
+        <figcaption><strong>3. Rotating image</strong><code>animation: spin 4s linear infinite;</code></figcaption>
+      </figure>
+      <figure class="specimen">
+        <!-- To use real pictures, replace each slide with an img tag, for example: <img src="photo1.jpg" alt="Describe the picture"> -->
+        <div class="slider"><div class="slides"><div>Slide 1</div><div>Slide 2</div><div>Slide 3</div></div></div>
+        <figcaption><strong>4. Slider with three images</strong><code>animation: slide 9s ease-in-out infinite;</code><p class="hint">The slides are color blocks so the page works without image files.</p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Made with ❤️ while learning CSS.</p>
+</footer>
+
+</body>
+</html>
