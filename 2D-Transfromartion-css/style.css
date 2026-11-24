@@ -100,34 +100,6 @@ code { display: block; font: 0.78rem/1.5 var(--mono); color: var(--muted); overf
 .an-steps { animation: steps 4s ease-in-out infinite alternate; }
 .an-short { animation: harry 6s linear 1s infinite reverse; }
 
-/* ---------- PRACTICE SET ---------- */
-.frame { display: grid; place-items: center; padding: 11px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
-.zone  { padding: 22px 12px; }
-.progress { width: 100%; height: 6px; border-radius: 999px; background: #e3e8ef; overflow: hidden; }
-.progress span { display: block; width: 0; height: 100%; border-radius: inherit; }
-.p-anim span  { background: var(--green); animation: load 3s ease-in-out infinite; }
-.p-trans span { background: var(--blue); transition: width 3s ease-in-out; }
-.zone:is(:hover, :focus) .p-trans span { width: 100%; }
-@keyframes load { from { width: 0; } to { width: 100%; } }
-
-.spin { display: grid; place-items: center; width: 110px; height: 110px; border-radius: 50%; background: linear-gradient(90deg, var(--purple-deep) 50%, var(--blue-deep) 50%); color: #fff; font-size: 1.2rem; font-weight: 700; animation: spin 4s linear infinite; }
-@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-.slider { overflow: hidden; border: 1px solid var(--line); border-radius: 6px; }
-.slides { display: flex; width: 300%; animation: slide 9s ease-in-out infinite; }
-.slides > * { flex: 1; height: 150px; display: grid; place-items: center; object-fit: cover; color: #fff; font-size: 1.3rem; font-weight: 700; }
-.slides > :nth-child(1) { background: var(--purple-deep); }
-.slides > :nth-child(2) { background: var(--blue-deep); }
-.slides > :nth-child(3) { background: var(--green-deep); }
-@keyframes slide {
-  0%, 28%  { transform: translateX(0); }
-  33%, 61% { transform: translateX(-33.333%); }
-  66%, 95% { transform: translateX(-66.666%); }
-  100%     { transform: translateX(0); }
-}
-
-footer { margin-top: 64px; padding-top: 16px; padding-bottom: 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
-
 /* respect reduced motion: loops play once instead of forever */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-iteration-count: 1 !important; }
