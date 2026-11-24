@@ -1,10 +1,178 @@
-.conatorinoer
-{
-    grid:rid;
-    background-color: #f0f0f0;
+/* Chapter 7: CSS Grid & Media Queries */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.items
-{
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    background-color: #ffffff;
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #172033;
+  background-color: #f3f6fb;
+}
+
+/* Header layout made with CSS Grid */
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  column-gap: 20px;
+  padding: 18px 7%;
+  background-color: #172554;
+  color: white;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navigation {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  column-gap: 24px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: min(1100px, 86%);
+  margin: 36px auto;
+}
+
+.intro {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 6px 0 10px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+}
+
+/* Grid container */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 18px;
+  grid-row-gap: 18px;
+}
+
+.card {
+  padding: 22px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 14px rgba(23, 32, 51, 0.08);
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  color: #1d4ed8;
+  font-size: 1.2rem;
+}
+
+/* This grid item spans two columns */
+.card-wide {
+  grid-column: 1 / span 2;
+}
+
+/* This item spans the full width of the grid */
+.card-feature {
+  grid-column: 1 / span 3;
+  background-color: #dbeafe;
+}
+
+code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background-color: #e8eef9;
+  color: #9d174d;
+}
+
+.responsive-note {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #16a34a;
+  color: white;
+}
+
+.responsive-note h2 {
+  margin-bottom: 8px;
+}
+
+.screen-size {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #526078;
+}
+
+/* Medium devices: red background */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .responsive-note {
+    background-color: red;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-feature {
+    grid-column: 1 / span 2;
+  }
+
+  .card-wide {
+    grid-column: 1 / span 2;
+  }
+}
+
+/* Small devices: yellow background */
+@media only screen and (max-width: 600px) {
+  .responsive-note {
+    background-color: #eab308;
+    color: #172033;
+  }
+
+  .site-header {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  .navigation {
+    grid-auto-flow: row;
+    justify-content: start;
+    row-gap: 8px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-feature,
+  .card-wide {
+    grid-column: auto;
+  }
 }
