@@ -2,13 +2,15 @@
 
 <h1 align="center"><img src="banner.svg" alt="Learning CSS — One Style at a Time" width="100%" /></h1>
 
-[Overview](#-overview) · [Course Info](#-course-info) · [Topics](#-topics-covered) · [Skills](#-skills-gained) · [Syntax](#-syntax--key-concepts) · [Certificate](#-certificate) · [Links](#-reference--links) · [Next Steps](#-key-takeaways--next-steps)
+[Overview](#-overview) · [Course Info](#-course-info) · [Roadmap](#-learning-roadmap) · [Project](#-project-1-e-commerce-website) · [Skills](#-skills-gained) · [Certificate](#-certificate) · [Links](#-reference--links) · [Next Steps](#-key-takeaways--next-steps)
+
+**Parts:** [🌱 1](#-part-1-creating-your-first-css-website) · [🎨 2](#-part-2-colors-and-backgrounds) · [📦 3](#-part-3-the-css-box-model) · [🔤 4](#-part-4-fonts-and-display) · [📏 5](#-part-5-size-position-and-lists) · [🧩 6](#-part-6-flexbox) · [🧱 7](#-part-7-css-grid-and-media-queries) · [✨ 8](#-part-8-transforms-transitions-and-animations)
 
 </div>
 
 ## 📖 Overview
 
-CSS is the language that controls how web pages look: layout, colors, typography, spacing, and motion. This course takes me from the basics — how HTML and CSS work together — through selectors, colors, and backgrounds, and on to the box model, Flexbox, Grid, and responsive design.
+CSS is the language that controls how web pages look: layout, colors, typography, spacing, and motion. This README follows my CSS notes in **8 parts**, from the first selector to transforms and animations, and ends with a **project** that puts it all together. Each part lists what I learned, the syntax to remember, the practice set from my notes, and a link to my code.
 
 🎯 **Why I took it:** to build a strong foundation in CSS and gradually create beautiful, responsive, modern websites.
 
@@ -19,148 +21,422 @@ CSS is the language that controls how web pages look: layout, colors, typography
 | 🎓 **Course Name** | Learning CSS |
 | 🏫 **Platform / Provider** | [PLATFORM, e.g. GeeksforGeeks, Coursera, Udemy] |
 | ⏳ **Duration** | [DURATION, e.g. 20 hours] |
+| 🧭 **Structure** | 8 parts and 1 project |
 | 📌 **Completion Status** | [Completed / In Progress] |
 | 📅 **Completion Date** | [DATE, if completed] |
 
-## 📚 Topics Covered
+## 🧭 Learning Roadmap
 
-### 🧭 Learning Roadmap
-
-🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ **6 of 10 steps completed**
+🟩🟩🟩🟩🟩🟩🟩🟩🟪 **8 parts covered and 1 project built**
 
 ```mermaid
 flowchart LR
-    subgraph DONE["✅ Completed"]
+    subgraph F["Foundations"]
         direction TB
-        A["🌱 Intro to CSS"] --> B["🔗 Ways to CSS"] --> C["🎨 Background Color"] --> D["📦 Box Model"] --> E["🔤 Font & Display"] --> F["📏 Size, Positions & Lists"]
+        A["🌱 1. First CSS<br/>Website"] --> B["🎨 2. Colors and<br/>Backgrounds"]
     end
-    subgraph NEXT["🔜 Coming up"]
+    subgraph T["Box and text"]
         direction TB
-        G["↔️ Flexbox"] --> H["🧱 Grid"] --> I["📱 Responsive Design"] --> J["🚀 Modern CSS"]
+        C["📦 3. Box Model"] --> D["🔤 4. Fonts and<br/>Display"]
     end
-    DONE --> NEXT
+    subgraph L["Layout"]
+        direction TB
+        E["📏 5. Size, Position<br/>and Lists"] --> G["🧩 6. Flexbox"] --> H["🧱 7. Grid and<br/>Media Queries"]
+    end
+    subgraph M["Motion"]
+        direction TB
+        I["✨ 8. Transforms,<br/>Transitions and<br/>Animations"]
+    end
+    subgraph N["Project"]
+        direction TB
+        P["🛒 Project 1:<br/>AmzFlipla"]
+    end
+    F --> T --> L --> M --> N
 
     classDef done fill:#2ecc71,stroke:#27ae60,color:#ffffff,stroke-width:2px
-    classDef next fill:#f1c40f,stroke:#f39c12,color:#333333,stroke-width:2px
-    classDef todo fill:#ecf0f1,stroke:#bdc3c7,color:#555555,stroke-dasharray:5 5
-    class A,B,C,D,E,F done
-    class G next
-    class H,I,J todo
-    style DONE stroke:#2ecc71,stroke-width:2px
-    style NEXT stroke:#f1c40f,stroke-width:2px,stroke-dasharray:5 5
+    classDef project fill:#9b59b6,stroke:#8e44ad,color:#ffffff,stroke-width:2px
+    class A,B,C,D,E,G,H,I done
+    class P project
+    style F stroke:#2ecc71,stroke-width:2px
+    style T stroke:#2ecc71,stroke-width:2px
+    style L stroke:#2ecc71,stroke-width:2px
+    style M stroke:#2ecc71,stroke-width:2px
+    style N stroke:#9b59b6,stroke-width:2px
 ```
 
-> 🟩 **Completed** · 🟨 **Up next** · ⬜ **Planned**
+> 🟩 **Covered in my notes** · 🟪 **Built as a project**
 
-### 🧱 Modules
+## 🌱 Part 1: Creating Your First CSS Website
 
-<table width="100%">
-  <tr>
-    <td align="center" valign="top" width="33%">
-      <b>🟢 MODULE 01</b>
-      <h3>🌱 Intro to CSS</h3>
-      <p>What CSS is, how HTML (structure) and CSS (style) work together, and writing a first rule.</p>
-      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Intro-to-css"><b>📂 Explore</b></a>
-    </td>
-    <td align="center" valign="top" width="33%">
-      <b>🔵 MODULE 02</b>
-      <h3>🔗 Ways to CSS</h3>
-      <p>The three ways to add CSS — inline, internal, and external — plus element, class, and ID selectors.</p>
-      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Ways-to-CSS"><b>📂 Explore</b></a>
-    </td>
-    <td align="center" valign="top" width="33%">
-      <b>🟣 MODULE 03</b>
-      <h3>🎨 Background Color</h3>
-      <p><code>background-color</code>, images, gradients, and color formats — names, HEX, RGB/RGBA, HSL/HSLA.</p>
-      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Coluring-Background"><b>📂 Explore</b></a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" width="33%">
-      <b>🔴 MODULE 04</b>
-      <h3>📦 Box Model</h3>
-      <p>Content, padding, border, and margin; width and height; margin collapse; and <code>box-sizing</code>.</p>
-      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/BOX-Model"><b>📂 Explore</b></a>
-    </td>
-    <td align="center" valign="top" width="33%">
-      <b>🟠 MODULE 05</b>
-      <h3>🔤 Font &amp; Display</h3>
-      <p>Font properties — <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, <code>line-height</code> — and the <code>display</code> property: block, inline, inline-block, flex, grid, and none.</p>
-      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Font-Display"><b>📂 Explore</b></a>
-    </td>
-    <td align="center" valign="top" width="33%">
-      <b>🟡 MODULE 06</b>
-      <h3>📏 Size, Positions &amp; Lists</h3>
-      <p>CSS units (absolute and relative), the <code>position</code> property with <code>z-index</code>, and styling lists with <code>list-style</code>.</p>
-      <a href="https://github.com/vinayakmishra4/Learning-CSS/tree/main/Size-Postions-Lists"><b>📂 Explore</b></a>
-    </td>
-  </tr>
-</table>
+> 🟢 **Part 1 of 8** — how HTML and CSS fit together, the three ways to add CSS, and how to select elements.
 
-> 🚧 More modules are on the way — this list grows as I learn.
+**What I learned**
 
-## 🔧 Skills Gained
+- HTML is the skeleton of a page; CSS (Cascading Style Sheets) styles it and makes it look good on any screen.
+- The DOM is the tree of objects the browser builds from the page.
+- An `id` identifies one unique element; a `class` can be shared by many elements, and one element can have several classes separated by spaces.
+- Three ways to add CSS: the `<style>` tag, inline `style` attributes, and an external stylesheet linked with `<link>`.
+- Selectors: element (`h2`), id (`#first`), class (`.red`), grouped (`h1, h2, h3`), element and class together (`p.red`), and the universal selector (`*`).
+- An inline style overrides external and internal styles, and comments in CSS are ignored.
 
-- ✅ **HTML + CSS together** — applying CSS to HTML with inline, internal, and external styles
-- ✅ **CSS syntax** — writing rules with selectors, properties, and values
-- ✅ **Selectors** — targeting elements with element, ID, and class selectors, including multiple classes
-- ✅ **Text & fonts** — aligning and coloring text, and controlling `font-family`, `font-size`, `font-weight`, and `line-height`
-- ✅ **Backgrounds** — setting background colors and images, plus size, repeat, position, and gradients
-- ✅ **Color formats** — using color names, HEX, RGB/RGBA, and HSL/HSLA values
-- ✅ **Box model** — working with content, padding, border, and margin, plus `box-sizing`
-- ✅ **Spacing & borders** — setting width, height, margin, padding, and border, including shorthand values and margin collapse
-- ✅ **Display** — choosing how elements flow with `block`, `inline`, `inline-block`, `flex`, `grid`, and `none`
-- ✅ **Units** — sizing with absolute units (`px`, `cm`, `pt`) and relative units (`%`, `em`, `rem`, `vw`, `vh`)
-- ✅ **Positioning** — placing elements with `position` (`static`, `relative`, `absolute`, `fixed`, `sticky`), offsets, and `z-index`
-- ✅ **Lists** — styling ordered, unordered, and description lists with the `list-style` properties
-
-## 🧩 Syntax & Key Concepts
-
-> [!TIP]
-> Words like `selector`, `property`, and `value` below are placeholders — swap in real names and values when writing CSS.
-
-### General Syntax Patterns
+<details>
+<summary><b>Syntax to remember</b></summary>
 
 | Concept | Pattern |
 |:--|:--|
 | Rule set | `selector { property: value; }` |
 | Element selector | `element-name { property: value; }` |
-| Universal selector | `* { property: value; }` |
 | ID selector | `#id-name { property: value; }` |
 | Class selector | `.class-name { property: value; }` |
+| Grouped selectors | `selector-1, selector-2 { property: value; }` |
+| Element and class | `element-name.class-name { property: value; }` |
+| Universal selector | `* { property: value; }` |
+| Multiple classes | `class="class-one class-two"` |
 | Inline CSS | `<element style="property: value;">` |
 | Internal CSS | `<style> selector { property: value; } </style>` |
-| External CSS (link a stylesheet) | `<link rel="stylesheet" href="file-name.css">` |
-| HEX color | `#RRGGBB` |
-| RGB / RGBA color | `rgb(red, green, blue)` · `rgba(red, green, blue, alpha)` |
-| HSL / HSLA color | `hsl(hue, saturation, lightness)` · `hsla(hue, saturation, lightness, alpha)` |
+| External CSS | `<link rel="stylesheet" href="file-name.css">` |
+| Comment | `/* comment text */` |
+
+</details>
+
+<details>
+<summary><b>Practice set from my notes</b></summary>
+
+1. Create a website with a class `red` div that has a red background color and white text color.
+2. Create an element with the id `head` and check that the background color works on it as inline CSS, external CSS, and with the `<style>` tag.
+3. Create a CSS class `one` and check that it works on multiple elements.
+4. Create multiple CSS classes and check that all of them work on the same element.
+5. Look at the MDN CSS reference and play around with a few key-value CSS rules.
+
+</details>
+
+📂 **Code:** [Intro-to-css](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Intro-to-css) and [Ways-to-CSS](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Ways-to-CSS)
+
+## 🎨 Part 2: Colors and Backgrounds
+
+> 🔵 **Part 2 of 8** — coloring text and containers, and controlling background images.
+
+**What I learned**
+
+- `color` sets the text color and `background-color` sets a container's background.
+- Color values come as RGB, HEX, or HSL (hue, saturation, lightness); RGBA and HSLA add an alpha value for transparency.
+- `background-image` adds an image, which repeats in both directions by default.
+- `background-repeat` takes `repeat-x`, `repeat-y`, or `no-repeat`.
+- `background-size` takes `cover`, `contain`, `auto`, or a width and height.
+- `background-position` places the image, and `background-attachment` makes it fixed or scrolling.
+- The `background` shorthand sets several of these at once, and values can be skipped while the rest stay in order.
+
+<details>
+<summary><b>Syntax to remember</b></summary>
+
+| Concept | Pattern |
+|:--|:--|
+| Text color | `color: value;` |
+| Background color | `background-color: value;` |
+| RGB | `rgb(red, green, blue)` |
+| HEX | `#RRGGBB` |
+| HSL | `hsl(hue, saturation, lightness)` |
+| RGBA / HSLA | `rgba(red, green, blue, alpha)` · `hsla(hue, saturation, lightness, alpha)` |
 | Background image | `background-image: url('image-path');` |
-| Four-value shorthand (margin, padding) | `property: top right bottom left;` |
-| Border shorthand | `border: width style color;` |
-| Font family | `font-family: font-name, generic-family;` |
+| Repeat | `background-repeat: value;` |
+| Size | `background-size: value;` |
+| Position | `background-position: horizontal vertical;` |
+| Attachment | `background-attachment: value;` |
+| Shorthand | `background: color image repeat attachment position;` |
+
+</details>
+
+<details>
+<summary><b>Practice set from my notes</b></summary>
+
+1. Create a dark blue navigation bar with light-colored items.
+2. Change the color of the main container on your page to dark red.
+3. Create a div and add a background image with a given width and height.
+4. Create a vertical box and add a fixed, non-scrolling background to it.
+5. Verify that the background shorthand property works with some of the values skipped.
+
+</details>
+
+📂 **Code:** [Coluring-Background](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Coluring-Background)
+
+## 📦 Part 3: The CSS Box Model
+
+> 🟣 **Part 3 of 8** — how every element is a box, and how to control its size and spacing.
+
+**What I learned**
+
+- Every element is a box made of content, padding, border, and margin.
+- The total space an element takes is its size plus the padding, border, and margin on both sides.
+- `margin` and `padding` take one, two, or four values (four values go clockwise: top, right, bottom, left), and each side can also be set on its own.
+- Borders have a width, style, and color, or can be set with the `border` shorthand; `border-radius` rounds the corners.
+- Margin collapse: when two margins from different elements meet, the larger one wins.
+- `box-sizing` is `content-box` by default (width covers only the content) or `border-box` (width includes padding and border).
+
+<details>
+<summary><b>Syntax to remember</b></summary>
+
+| Concept | Pattern |
+|:--|:--|
+| Width and height | `width: length;` · `height: length;` |
+| Margin and padding | `property: top right bottom left;` |
+| Two-value shorthand | `property: top-and-bottom left-and-right;` |
+| One side only | `margin-top: length;` · `padding-left: length;` |
+| Border | `border: width style color;` |
+| Border radius | `border-radius: length;` |
+| Box sizing | `box-sizing: value;` |
+
+</details>
+
+<details>
+<summary><b>Practice set from my notes</b></summary>
+
+1. Create a website layout with a header box, one content box, and one footer.
+2. Add borders and margins to the layout.
+3. Did the margin collapse between the content box and the footer?
+4. Add the `box-sizing` property to the content box. What changes did you notice?
+
+</details>
+
+📂 **Code:** [BOX-Model](https://github.com/vinayakmishra4/Learning-CSS/tree/main/BOX-Model)
+
+## 🔤 Part 4: Fonts and Display
+
+> 🔴 **Part 4 of 8** — how elements flow on the page, and how to style text and fonts.
+
+**What I learned**
+
+- `display` decides whether an element acts as `block` or `inline` and which layout (such as flex or grid) its children use.
+- `inline` takes only the space it needs and ignores width and height; `block` takes the full width on its own line; `inline-block` sits inline but accepts width, height, margin, and padding.
+- `display: none` removes an element from the flow, while `visibility: hidden` hides it but keeps its space.
+- Text styling: `text-align`, `text-decoration`, `text-transform`, and `line-height`.
+- `font-family` takes a fallback list, web-safe fonts work everywhere, and Google Fonts can be added through the stylesheet.
+- Other font properties: `font-size`, `font-style`, `font-variant`, and `font-weight`, plus generic families like serif and sans-serif.
+
+<details>
+<summary><b>Syntax to remember</b></summary>
+
+| Concept | Pattern |
+|:--|:--|
+| Display | `display: value;` |
+| Visibility | `visibility: value;` |
+| Text alignment | `text-align: value;` |
+| Text decoration | `text-decoration: value;` |
+| Text transform | `text-transform: value;` |
+| Line height | `line-height: number;` |
+| Font family with fallbacks | `font-family: "font-name", generic-family;` |
+| Other font properties | `font-size: length;` · `font-style: value;` · `font-variant: value;` · `font-weight: value;` |
+
+</details>
+
+<details>
+<summary><b>Practice set from my notes</b></summary>
+
+1. Create a website layout with a black navbar, a red div, and a green div.
+2. Add a footer with the Google font "Ballu Bhai" to the layout.
+3. Remove the underlines from the links in the layout.
+4. Demonstrate the difference between `display: none` and `visibility: hidden` using a div.
+5. Change the footer to all uppercase.
+
+</details>
+
+📂 **Code:** [Font-Display](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Font-Display)
+
+## 📏 Part 5: Size, Position and Lists
+
+> 🟠 **Part 5 of 8** — flexible units, positioning, stacking order, and list styling.
+
+**What I learned**
+
+- Pixels depend on the viewing device, so relative units adapt better: `em` (parent font size), `rem` (root font size), `vw` and `vh` (1% of the viewport width and height), and `%` (relative to the parent).
+- `min-width`, `max-width`, `min-height`, and `max-height` set limits on an element's size.
+- `position` can be `static` (the default), `relative`, `absolute` (relative to the nearest non-static ancestor), `fixed` (relative to the browser window), or `sticky` (based on scroll position).
+- `top`, `right`, `bottom`, `left`, and `z-index` take effect once an element is positioned.
+- `z-index` sets the stacking order when elements overlap.
+- `list-style` is a shorthand for a list's type, position, and image.
+
+<details>
+<summary><b>Syntax to remember</b></summary>
+
+| Concept | Pattern |
+|:--|:--|
 | Length with a unit | `property: <number><unit>;` |
-| Positioning | `position: value;` · `top: length;` · `right: length;` · `bottom: length;` · `left: length;` |
+| Size limits | `min-width: length;` · `max-width: length;` · `min-height: length;` · `max-height: length;` |
+| Position | `position: value;` |
+| Offsets | `top: length;` · `right: length;` · `bottom: length;` · `left: length;` |
 | Stacking order | `z-index: number;` |
 | List shorthand | `list-style: type position image;` |
 
-### Key Concepts
+</details>
 
-| Concept | In a nutshell |
+<details>
+<summary><b>Practice set from my notes</b></summary>
+
+1. Create a responsive navbar using relative lengths.
+2. Create a sticky navbar using the `position` property.
+3. Demonstrate the use of the `list-style` property using a `ul` as an example.
+4. Demonstrate the use of `z-index` using an example.
+
+</details>
+
+📂 **Code:** [Size-Postions-Lists](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Size-Postions-Lists)
+
+## 🧩 Part 6: Flexbox
+
+> 🟡 **Part 6 of 8** — float and clear first, then Flexbox for laying out and aligning items in a container.
+
+**What I learned**
+
+- `float` pushes an element to the left or right, and `clear` controls which elements can float beside a given element.
+- Flexbox lays out, aligns, and distributes space among the items in a container; `display: flex` makes the container, and its children become flex items.
+- A flex container has a main axis and a cross axis (the cross axis is not always vertical).
+- `flex-direction` can be `row` (the default), `row-reverse`, `column`, or `column-reverse`.
+- Container properties: `flex-wrap`, `justify-content` (main axis), `align-items` (cross axis), and `align-content` (spacing between lines).
+- Item properties: `order`, `align-self`, `flex-grow`, and `flex-shrink`.
+
+<details>
+<summary><b>Syntax to remember</b></summary>
+
+| Concept | Pattern |
 |:--|:--|
-| 🏗️ **HTML · CSS · JS** | HTML gives structure, CSS gives style, and JavaScript adds behavior. |
-| 🧭 **Three ways to add CSS** | Inline (on one element), internal (in a style element in the head), and external (a separate file — best for larger projects). |
-| 🎯 **ID vs. Class** | An ID (`#`) targets one unique element; a class (`.`) can be reused on many elements and combined on one. |
-| 🌈 **Color formats** | Names, HEX, RGB, and HSL define colors; the extra A in RGBA and HSLA adds transparency (alpha from 0 to 1). |
-| 🖼️ **Backgrounds** | Color, image, repeat, position, size, and gradients control how an element's background looks. |
-| 📦 **Box Model** | Every element is a box: content → padding → border → margin. |
-| 🔄 **Margin Collapse** | Adjoining vertical margins overlap instead of adding up — 30px and 20px give a 30px gap, not 50px. |
-| 📐 **Box Sizing** | `content-box` (the default) adds padding and border to the width; `border-box` includes them, so sizes are easier to predict. |
-| 🧱 **Display** | `block` elements start on a new line, `inline` elements flow within a line, and `inline-block` flows inline but accepts width and height. |
-| 📏 **Units** | Absolute units (`px`, `cm`, `mm`, `in`, `pt`, `pc`) stay fixed; relative units (`%`, `em`, `rem`, `vw`, `vh`) scale with their parent, font size, or screen. |
-| 📍 **Positioning** | `static` is the default; `relative` shifts an element from its normal spot, `absolute` places it in its containing block, `fixed` pins it to the viewport, and `sticky` sticks while scrolling. |
-| 🥞 **Stacking order** | When elements overlap, a higher `z-index` brings an element to the front. |
-| 📋 **Lists** | `ol` makes numbered lists, `ul` makes bulleted lists, and `dl` pairs terms with descriptions; the `list-style` properties customize the markers. |
-| 👀 **Readability** | Good color combinations and strong contrast make text easier to read. |
+| Float and clear | `float: value;` · `clear: value;` |
+| Flex container | `display: flex;` |
+| Direction | `flex-direction: value;` |
+| Wrapping | `flex-wrap: value;` |
+| Container alignment | `justify-content: value;` · `align-items: value;` · `align-content: value;` |
+| Item order and alignment | `order: number;` · `align-self: value;` |
+| Grow and shrink | `flex-grow: number;` · `flex-shrink: number;` |
+
+</details>
+
+<details>
+<summary><b>Practice set from my notes</b></summary>
+
+1. Create a layout of your choice using float.
+2. Create the same layout using Flexbox.
+3. Create a navigation bar (Home, About, Contact) using Flexbox.
+4. Create a layout with a navigation bar, a background-image header, and three images using Flexbox.
+
+</details>
+
+📂 **Code:** [Flexbox](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Flexbox) (the float and clear practice)
+
+## 🧱 Part 7: CSS Grid and Media Queries
+
+> 🟤 **Part 7 of 8** — two-dimensional layouts with Grid, and styles that respond to screen size.
+
+**What I learned**
+
+- `display: grid` makes a grid container, and its direct children become grid items.
+- `grid-column-gap`, `grid-row-gap`, and the `grid-gap` shorthand (row first, then column) set the spacing; a single value sets both.
+- Container properties: `grid-template-columns`, `grid-template-rows`, `justify-content`, and `align-content`.
+- Item properties: `grid-column` and `grid-row` set how many columns or rows an item spans, for example starting at column 1 and spanning 3.
+- Media queries apply CSS only when a condition is true, such as a maximum screen width, which is what makes a page responsive.
+- My practice page combines both: a grid that changes its columns and background color across large, medium, and small screens.
+
+<details>
+<summary><b>Syntax to remember</b></summary>
+
+| Concept | Pattern |
+|:--|:--|
+| Grid container | `display: grid;` |
+| Column and row sizes | `grid-template-columns: size size size;` · `grid-template-rows: size size;` |
+| Gaps | `grid-gap: row-gap column-gap;` |
+| Item spanning | `grid-column: start / end;` · `grid-row: start / end;` · `grid-column: start / span count;` |
+| Media query | `@media only screen and (max-width: width) { selector { property: value; } }` |
+
+</details>
+
+<details>
+<summary><b>Practice set from my notes</b></summary>
+
+1. Create a header with content using CSS Grid.
+2. Create the layouts from the Part 6 practice set using CSS Grid.
+3. Create a webpage that is green on large devices, red on medium devices, and yellow on small devices.
+
+</details>
+
+📂 **Code:** [Gridbox](https://github.com/vinayakmishra4/Learning-CSS/tree/main/Gridbox)
+
+## ✨ Part 8: Transforms, Transitions and Animations
+
+> ⚫ **Part 8 of 8** — moving, resizing, and animating elements.
+
+**What I learned**
+
+- Transforms rotate, move, skew, or scale elements, and `transform-origin` sets the point they transform around.
+- 2D methods: `translate()`, `rotate()`, `scale()`, `scaleX()`, `scaleY()`, `skew()`, and `matrix()`; 3D methods: `rotateX()`, `rotateY()`, and `rotateZ()`.
+- Transitions change property values smoothly using a property, duration, timing function, and delay, and several properties can transition at once.
+- Animations use an `@keyframes` rule (from and to, or percentage steps) plus the animation name, duration, timing function, delay, iteration count, and direction.
+- Both have a shorthand: `transition` and `animation`.
+
+<details>
+<summary><b>Syntax to remember</b></summary>
+
+| Concept | Pattern |
+|:--|:--|
+| Transform | `transform: method(value);` |
+| Transform origin | `transform-origin: x y;` |
+| Transition | `transition: property duration timing-function delay;` |
+| Multiple transitions | `transition: property-1 duration-1, property-2 duration-2;` |
+| Keyframes (from and to) | `@keyframes name { from { property: value; } to { property: value; } }` |
+| Keyframes (percentages) | `@keyframes name { 0% { property: value; } 100% { property: value; } }` |
+| Animation | `animation: name duration timing-function delay iteration-count direction;` |
+
+</details>
+
+<details>
+<summary><b>Practice set from my notes</b></summary>
+
+1. Create a thin progress bar animation for a website.
+2. Create the same progress bar using a transition.
+3. Create a rotating image animation using CSS.
+4. Create a slider with three images using CSS.
+
+</details>
+
+📂 **Code:** [2D-Transfromartion-css](https://github.com/vinayakmishra4/Learning-CSS/tree/main/2D-Transfromartion-css)
+
+## 🛒 Project 1: E-Commerce Website
+
+> 🟣 **Project 1** — **AmzFlipla**, a responsive shopping homepage built with HTML, CSS, and JavaScript. It answers the project at the end of my notes: create a homepage for an e-commerce website and use media queries to make it responsive.
+
+AmzFlipla is inspired by Amazon and Flipkart. The page has a header with search and a cart counter, a hero section, shopping categories, deals, product cards, a newsletter form, and a footer.
+
+**What it does**
+
+| Feature | How it works |
+|:--|:--|
+| 🔍 Product search | Type a name and press Enter or click search; cards that do not match are hidden, and a message appears when nothing is found |
+| 🛒 Shopping cart | Each Add to Cart button raises the cart counter in the header |
+| 🏷️ Categories | Electronics, Fashion, Home, Accessories, and Footwear |
+| 📩 Newsletter | An email form that thanks the visitor for subscribing |
+| ☰ Mobile menu | The navigation links collapse into a menu button on small screens |
+
+**Where my notes show up**
+
+| Part | In the project |
+|:--|:--|
+| [🧱 Part 7](#-part-7-css-grid-and-media-queries) | CSS Grid lays out the categories and product cards, and three media queries (900px, 650px, and 380px) change the columns and navigation for tablets and phones |
+| [🧩 Part 6](#-part-6-flexbox) | Flexbox arranges the navbar, search box, links, and hero; `flex-wrap` and `order` move the search box onto its own row on small screens |
+| [🔤 Part 4](#-part-4-fonts-and-display) | `display: none` and `display: block` hide the nav links and show the mobile menu on small screens |
+| [✨ Part 8](#-part-8-transforms-transitions-and-animations) | Hover transitions and transforms on the category and product cards |
+| [📦 Part 3](#-part-3-the-css-box-model) | `box-sizing` and `border-radius` for sizing and rounded corners |
+
+🛠️ **Built with:** HTML5, CSS3, and JavaScript
+
+📂 **Code:** [AmzFlipla-E-Commerce-Website](https://github.com/vinayakmishra4/AmzFlipla-E-Commerce-Website)
+
+## 🔧 Skills Gained
+
+- ✅ **Add and target** — apply CSS three ways and select elements by tag, id, class, group, or all at once
+- ✅ **Color and backgrounds** — use RGB, HEX, and HSL colors, and control background images, size, repeat, and position
+- ✅ **Spacing** — work with the box model: width, height, margin, padding, border, and `box-sizing`
+- ✅ **Text and display** — style fonts with fallbacks and Google Fonts, and control how elements flow
+- ✅ **Size and place** — use relative units, `position`, `z-index`, and `list-style`
+- ✅ **Lay out pages** — build layouts with float, Flexbox, and Grid
+- ✅ **Respond to screens** — apply styles with media queries
+- ✅ **Add motion** — transform, transition, and animate elements
+- ✅ **Build a project** — combine HTML, CSS, and a little JavaScript into a responsive e-commerce homepage
 
 ## 🏅 Certificate
 
@@ -168,7 +444,8 @@ flowchart LR
 
 ## 🔗 Reference / Links
 
-- 📂 [GitHub Repository](https://github.com/vinayakmishra4/Learning-CSS) — code and notes for every module
+- 📂 [GitHub Repository](https://github.com/vinayakmishra4/Learning-CSS) — code and notes for every part
+- 🛒 [AmzFlipla E-Commerce Website](https://github.com/vinayakmishra4/AmzFlipla-E-Commerce-Website) — my Project 1, built with HTML, CSS, and JavaScript
 - 🌐 [Course Page](INSERT_COURSE_LINK_HERE) — the course this README documents
 - 📘 [MDN Web Docs: CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) — the go-to reference for CSS properties, values, and guides
 
@@ -178,15 +455,16 @@ flowchart LR
 
 - Keeping HTML (structure) and CSS (style) in separate files keeps pages clean and easy to maintain.
 - Classes make styles reusable, while IDs target a single element.
-- The box model explains an element's real size and spacing — `border-box` makes sizing more predictable.
-- Relative units (`%`, `rem`, `vw`) let sizes adapt to their context, while `position` and `z-index` control where elements sit and which one is on top.
-- Choosing readable color combinations matters as much as choosing attractive ones.
+- The box model explains an element's real size and spacing, and `border-box` makes sizing more predictable.
+- Relative units, Flexbox, Grid, and media queries are the tools that make a layout adapt to any screen.
+- Building AmzFlipla showed how they work together: Grid for the cards, Flexbox for the navigation, and media queries for each screen size.
+- Transitions and animations add feedback and motion without any JavaScript.
 
 **🎯 Next Steps**
 
-- [ ] Build layouts with **Flexbox** and **Grid**
-- [ ] Make pages adapt to any screen with **responsive design**
-- [ ] Explore **modern CSS** and apply it in small projects
+- [ ] Add the planned features to **AmzFlipla**: a dedicated cart page, a wishlist, and product filters
+- [ ] Go deeper into **JavaScript** so the cart, search, and filters work like a real store
+- [ ] Keep exploring the **MDN CSS reference** and try more properties
 
 ---
 
